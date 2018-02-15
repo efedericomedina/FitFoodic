@@ -1,0 +1,161 @@
+
+$font-color: #414549;
+$border-left-button: #212529;
+$white-color: #f4f7f6;
+
+@mixin ele-style() {
+    height: 2.5em;
+    border-radius: .5em;
+    border-left: .5em solid $border-left-button;
+    outline: none;
+}
+
+user-data{
+    display: flex;
+    flex: 1;
+    font-family:  'Roboto', sans-serif;
+    font-size: 16px;
+    color: $font-color;
+
+    @media(max-height:650px){
+        font-size: 14px;
+    }
+
+    @media(max-height:550px){
+        font-size: 12px;
+    }
+
+    .main{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        background-image: url(../../assets/user.jpg); 
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .wrapper{
+            flex: 0 0 90%;
+            display: flex;
+            flex-direction: column;
+            padding: 1em;
+            overflow: auto;
+            background: #fff;       
+    
+            .header {
+                display: flex;
+                justify-content: flex-start;  
+                align-items: center; 
+                margin-bottom: .4em;
+
+                h2{
+                    margin:0;
+                    margin-left: 1em;                      
+                }
+
+                i{
+                    color: $border-left-button;
+                }
+            }
+    
+            .user-info{
+                flex: 2;
+                display: flex;
+                flex-direction: column;
+    
+                .info{
+                    display: flex;
+                    flex: 1;
+                    padding: .5em .3em;
+                    align-items: center;
+
+                    label{
+                        flex: 1;
+                        align-self: center;
+                        margin: 0;
+                        padding: 0;
+                    }
+    
+                    input{
+                        flex: 2;
+                        @include ele-style();
+                    }
+    
+                    select{
+                        flex: 2;
+                        @include ele-style();                  
+                    }
+    
+                    button{
+                        width: 8em;
+                        background: $border-left-button;
+                        border: 1px solid $border-left-button;
+                        color: $white-color;
+                        @include ele-style();   
+                        border-left: none;   
+                        cursor: pointer;                                
+                    }
+                }
+    
+                .info:last-child {
+                    justify-content: flex-end;
+                    align-items: center;
+                    margin-top: .4em;
+                }
+    
+            }
+        }
+    }
+
+    @media (min-width: 576px) { 
+        .main{
+            justify-content: flex-end;
+            align-items: center;
+
+            .wrapper{
+                flex: 0 0 60%;
+                border-radius: 1em;
+                margin-right: 5%;
+                max-height: 90%;
+            }
+        }
+    }
+
+    @media (min-width: 768px) { 
+        .main{
+            justify-content: flex-end;
+            align-items: center;
+
+            .wrapper{
+                flex: 0 0 50%;
+                border-radius: 1em;
+                margin-right: 10%;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .main{
+            justify-content: flex-end;
+            align-items: center;
+
+            .wrapper{
+                flex: 0 0 45%;
+                border-radius: 1em;
+                margin-right: 15%;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) { 
+        .main{
+            justify-content: flex-end;
+            align-items: center;
+
+            .wrapper{
+                flex: 0 0 35%;
+                border-radius: 1em;
+                margin-right: 20%;
+            }
+        }
+    }
+}
