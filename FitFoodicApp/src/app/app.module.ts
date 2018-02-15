@@ -7,18 +7,21 @@ import { SignupComponent } from './signup/signup.component'
 
 
 import { AppComponent } from './app.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent
+    SignupComponent,
+    UserInfoComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       [
-        { path: 'signup', component: SignupComponent}
+        { path: 'signup', component: SignupComponent},
+        { path: 'userinfo', component: UserInfoComponent}
       ]
     ),
     AngularFontAwesomeModule

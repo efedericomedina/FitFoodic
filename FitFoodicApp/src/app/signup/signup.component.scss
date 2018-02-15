@@ -23,7 +23,8 @@ sign-up{
             display: flex;
             flex-direction: column;
             padding: 2em;
-            height: 55%;
+            height: 60%;
+            position: relative;
 
             @media (min-width: 767px) { 
                 flex: 0 0 25%;
